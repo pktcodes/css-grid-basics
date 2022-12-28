@@ -7,22 +7,21 @@
     <title>CSS Grid</title>
     <link rel="stylesheet" href="styles.css" />
     <style>
-      /* grid-gap - obsolete */
-      /* gap */
+      /* fr vs other units - % */
+
       .container {
         min-height: 100vh;
         display: grid;
-        grid-template-columns: 1fr 5fr 3fr 1fr;
-        grid-template-rows: 1fr 1fr 1fr;
-        /* grid-column-gap: 20px;
-        grid-row-gap: 20px;
-        grid-gap: 50px;
-        grid-gap: 50px 100px; */
 
+        /* grid-template-columns: 200px 200px 200px 200px; */
+        /* grid-template-columns: 50% 50%; */
+        /* other units creates width problems with adding gap, fr makes it easy as it makes CSS grid do the behind the scenes math calculations and makes columns or rows smaller to fit */
+
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
         column-gap: 50px;
         row-gap: 50px;
-        gap: 100px 25px;
-        gap: 10px;
+        gap: 50px 100px;
       }
     </style>
   </head>
