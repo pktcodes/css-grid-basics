@@ -7,12 +7,17 @@
     <title>CSS Grid</title>
     <link rel="stylesheet" href="styles.css" />
     <style>
-      /* units - rows as well */
-      /* px rem em % auto fr  */
+      /* rows */
       .container {
+        min-height: 100vh;
         display: grid;
-        grid-template-columns: 200px 7rem auto;
-        /* grid-template-columns: 20% 50% 30%; */
+        grid-template-columns: 200px auto 7rem;
+
+        /* 3rd row auto is explicity defined */
+        /* grid-template-rows: auto 17rem auto; */
+
+        /* 3rd row auto is happening because of implicit grid coming from CSS grid */
+        grid-template-rows: auto 5rem;
       }
     </style>
   </head>
