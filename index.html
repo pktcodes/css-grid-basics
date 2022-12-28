@@ -7,16 +7,22 @@
     <title>CSS Grid</title>
     <link rel="stylesheet" href="styles.css" />
     <style>
+      /* grid-gap - obsolete */
       /* gap */
       .container {
         min-height: 100vh;
         display: grid;
         grid-template-columns: 1fr 5fr 3fr 1fr;
         grid-template-rows: 1fr 1fr 1fr;
-        grid-column-gap: 20px;
+        /* grid-column-gap: 20px;
         grid-row-gap: 20px;
         grid-gap: 50px;
-        grid-gap: 50px 100px;
+        grid-gap: 50px 100px; */
+
+        column-gap: 50px;
+        row-gap: 50px;
+        gap: 100px 25px;
+        gap: 10px;
       }
     </style>
   </head>
