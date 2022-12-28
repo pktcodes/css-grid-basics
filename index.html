@@ -7,16 +7,17 @@
     <title>CSS Grid</title>
     <link rel="stylesheet" href="styles.css" />
     <style>
-      /* fr units - fraction of available space */
+      /* gap */
       .container {
         min-height: 100vh;
         display: grid;
         grid-template-columns: 1fr 5fr 3fr 1fr;
         grid-template-rows: 1fr 1fr 1fr;
+        grid-column-gap: 20px;
+        grid-row-gap: 20px;
+        grid-gap: 50px;
+        grid-gap: 50px 100px;
       }
-      /* Note: Difference
-        auto - takes up the width of the element 
-        fr -1fr takes up all the space*/
     </style>
   </head>
   <body>
