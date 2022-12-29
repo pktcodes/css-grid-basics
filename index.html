@@ -7,21 +7,23 @@
     <title>CSS Grid</title>
     <link rel="stylesheet" href="styles.css" />
     <style>
-      /* justify-content: flex-start -default */
+      /* align-content: stretch -default */
       .container {
         min-height: 100vh;
         display: grid;
         grid-template-columns: repeat(3, 100px);
 
-        /* When using justify content, value types matter because using fraction takes up all the available space, so justify content will not work  */
-        /* grid-template-columns: 100px 100px 1fr; */
+        /* optional because implicit grid handles automatic rows depending on columns */
+        grid-template-rows: 200px 200px;
 
-        /* justify-content: flex-start; */
-        /* justify-content: flex-end; */
-        /* justify-content: center; */
-        /* justify-content: space-between; */
-        /* justify-content: space-around; */
-        justify-content: space-evenly;
+        /* When using align content in container, container needs to have some height to align items vertically */
+        align-content: stretch;
+        align-content: flex-start;
+        align-content: flex-end;
+        align-content: center;
+        align-content: space-around;
+        align-content: space-between;
+        align-content: space-evenly;
       }
     </style>
   </head>
