@@ -7,23 +7,21 @@
     <title>CSS Grid</title>
     <link rel="stylesheet" href="styles.css" />
     <style>
-      /* align-content: stretch -default */
+      /* align-items justify-items --- content within items*/
+      /* justify-self align-self --- single item content */
       .container {
         min-height: 100vh;
         display: grid;
-        grid-template-columns: repeat(3, 100px);
-
-        /* optional because implicit grid handles automatic rows depending on columns */
-        grid-template-rows: 200px 200px;
-
-        /* When using align content in container, container needs to have some height to align items vertically */
-        align-content: stretch;
-        align-content: flex-start;
-        align-content: flex-end;
-        align-content: center;
-        align-content: space-around;
-        align-content: space-between;
-        align-content: space-evenly;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        align-items: center;
+        align-items: flex-start;
+        justify-items: flex-end;
+        justify-items: center;
+      }
+      .cell-1 {
+        align-self: center;
+        justify-self: flex-end;
       }
     </style>
   </head>
